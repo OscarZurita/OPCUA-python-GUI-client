@@ -4,11 +4,11 @@ from opcua_client import OPCUAClient
 from gui import MainWindow
 
 NODES = [
-    ("ValueClientName", "ns=2;i=211"),
-    ("ValueFrameIntegrity", "ns=2;i=180"),
-    ("ValueLastRevisionDate", "ns=2;i=183"),
-    ("ValueLensCondition", "ns=2;i=174"),
-    ("ValueUsageState", "ns=2;i=168"),
+    ("Client name", "ns=2;i=211"),
+    ("Frame integrity", "ns=2;i=180"),
+    ("Last revision date", "ns=2;i=183"),
+    ("Lens condition", "ns=2;i=174"),
+    ("Usage state", "ns=2;i=168"),
 ]
 
 if __name__ == "__main__":

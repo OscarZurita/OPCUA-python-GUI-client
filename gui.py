@@ -18,6 +18,8 @@ class NodeWidget(QWidget):
         self.layout.setSpacing(15)
         self.setLayout(self.layout)
         self.setMinimumWidth(500)
+        # Connect Enter key to write button
+        self.input.returnPressed.connect(self.write_button.click)
 
     def set_value(self, value):
         self.value_label.setText(str(value))
