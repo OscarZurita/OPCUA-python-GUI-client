@@ -13,4 +13,8 @@ class OPCUAClient:
 
     def read_node(self, node_id):
         node = self.client.get_node(node_id)
-        return node.get_value() 
+        return node.get_value()
+
+    def write_node(self, node_id, value):
+        node = self.client.get_node(node_id)
+        node.set_value(value) 

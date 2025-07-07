@@ -1,0 +1,1807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2025-06-05T16:59:39.5499762Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://admin-shell.io/samples/i4aas/instance/</Uri>
+    <Uri>http://opcfoundation.org/UA/i4aas/</Uri>
+  </NamespaceUris>
+  <UAObject NodeId="ns=1;s=AssetAdminShell" BrowseName="1:AssetAdminShell">
+    <DisplayName Locale="en">AssetAdminShell</DisplayName>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=86</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=86" BrowseName="Dictionaries" ParentNodeId="ns=1;s=AssetAdminShell">
+    <DisplayName>Dictionaries</DisplayName>
+    <Description Locale="en">Dictionaries</Description>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=88</Reference>
+      <Reference ReferenceType="i=40">i=17591</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AssetAdminShell</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=87" BrowseName="ConceptDescriptions" ParentNodeId="ns=1;i=86">
+    <DisplayName>ConceptDescriptions</DisplayName>
+    <Description Locale="en">ConceptDescriptions</Description>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=89</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=99</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=108</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=117</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=125</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=134</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=143</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=86</Reference>
+      <Reference ReferenceType="i=40">i=17591</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=89" BrowseName="0:https://example.com/ids/cd/5134_6172_5052_0929" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/5134_6172_5052_0929</DisplayName>
+    <Description Locale="en">Type of material the glasses are made of. Valid values: Plastic, Metal, Acetate, Titanium.</Description>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=90</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=92</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=95</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=95</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=212</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=90" BrowseName="Identification" ParentNodeId="ns=1;i=89">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=89</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=91</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=91" BrowseName="Id" ParentNodeId="ns=1;i=90" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=90</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/5134_6172_5052_0929</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=92" BrowseName="DataSpecification" ParentNodeId="ns=1;i=89">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=89</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=93</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=94</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=93" BrowseName="Type" ParentNodeId="ns=1;i=92" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=92</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=94" BrowseName="Keys" ParentNodeId="ns=1;i=92" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=92</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=95" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=89">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=96</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=97</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=98</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=89</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=89</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=96" BrowseName="PreferredName" ParentNodeId="ns=1;i=95" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=95</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Material used in the frame</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=97" BrowseName="DataType" ParentNodeId="ns=1;i=95" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=95</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=98" BrowseName="Definition" ParentNodeId="ns=1;i=95" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>Definition</DisplayName>
+    <Description Locale="en">Definition</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=95</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Type of material used in the glasses. Valid values: Plastic, Metal, Acetate, Titanium.</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>es</Locale>
+          <Text>Tipo de material del que están hechas las gafas. Valores válidos: Plástico, Metal, Acetato, Titanio.</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=99" BrowseName="0:https://example.com/ids/cd/9461_7172_5052_9479" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/9461_7172_5052_9479</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=100</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=102</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=105</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=105</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=230</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=100" BrowseName="Identification" ParentNodeId="ns=1;i=99">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=99</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=101</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=101" BrowseName="Id" ParentNodeId="ns=1;i=100" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=100</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/9461_7172_5052_9479</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=102" BrowseName="DataSpecification" ParentNodeId="ns=1;i=99">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=99</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=103</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=104</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=103" BrowseName="Type" ParentNodeId="ns=1;i=102" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=102</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=104" BrowseName="Keys" ParentNodeId="ns=1;i=102" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=102</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=105" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=99">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=106</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=107</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=99</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=99</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=106" BrowseName="PreferredName" ParentNodeId="ns=1;i=105" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=105</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Type of lens</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=107" BrowseName="DataType" ParentNodeId="ns=1;i=105" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=105</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=108" BrowseName="0:https://example.com/ids/cd/3282_7172_5052_3866" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/3282_7172_5052_3866</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=109</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=111</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=114</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=114</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=169</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=109" BrowseName="Identification" ParentNodeId="ns=1;i=108">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=108</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=110</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=110" BrowseName="Id" ParentNodeId="ns=1;i=109" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=109</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/3282_7172_5052_3866</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=111" BrowseName="DataSpecification" ParentNodeId="ns=1;i=108">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=108</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=112</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=113</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=112" BrowseName="Type" ParentNodeId="ns=1;i=111" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=111</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=113" BrowseName="Keys" ParentNodeId="ns=1;i=111" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=111</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=114" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=108">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=115</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=116</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=108</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=108</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=115" BrowseName="PreferredName" ParentNodeId="ns=1;i=114" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=114</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Condition of the lens</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>es</Locale>
+          <Text>Condicion de las lentes</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=116" BrowseName="DataType" ParentNodeId="ns=1;i=114" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=114</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=117" BrowseName="0:https://example.com/ids/cd/5403_7172_5052_8621" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/5403_7172_5052_8621</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=118</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=120</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=123</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=123</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=175</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=118" BrowseName="Identification" ParentNodeId="ns=1;i=117">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=117</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=119</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=119" BrowseName="Id" ParentNodeId="ns=1;i=118" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=118</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/5403_7172_5052_8621</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=120" BrowseName="DataSpecification" ParentNodeId="ns=1;i=117">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=117</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=121</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=122</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=121" BrowseName="Type" ParentNodeId="ns=1;i=120" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=120</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=122" BrowseName="Keys" ParentNodeId="ns=1;i=120" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=120</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=123" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=117">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=124</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=117</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=117</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=124" BrowseName="PreferredName" ParentNodeId="ns=1;i=123" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=123</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Integrity of the frame</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>es</Locale>
+          <Text>Estado de la montura</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=125" BrowseName="0:https://example.com/ids/cd/4085_3120_6052_6662" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/4085_3120_6052_6662</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=126</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=128</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=131</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=131</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=126" BrowseName="Identification" ParentNodeId="ns=1;i=125">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=125</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=127</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=127" BrowseName="Id" ParentNodeId="ns=1;i=126" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=126</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/4085_3120_6052_6662</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=128" BrowseName="DataSpecification" ParentNodeId="ns=1;i=125">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=125</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=129</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=130</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=129" BrowseName="Type" ParentNodeId="ns=1;i=128" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=128</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=130" BrowseName="Keys" ParentNodeId="ns=1;i=128" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=128</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=131" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=125">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=132</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=133</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=125</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=125</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=132" BrowseName="PreferredName" ParentNodeId="ns=1;i=131" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=131</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Color of the frame</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=133" BrowseName="DataType" ParentNodeId="ns=1;i=131" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=131</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=134" BrowseName="0:https://example.com/ids/cd/8505_8030_6052_7237" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/8505_8030_6052_7237</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=135</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=137</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=140</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=140</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=236</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=135" BrowseName="Identification" ParentNodeId="ns=1;i=134">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=134</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=136</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=136" BrowseName="Id" ParentNodeId="ns=1;i=135" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=135</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/8505_8030_6052_7237</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=137" BrowseName="DataSpecification" ParentNodeId="ns=1;i=134">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=134</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=138</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=139</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=138" BrowseName="Type" ParentNodeId="ns=1;i=137" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=137</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=139" BrowseName="Keys" ParentNodeId="ns=1;i=137" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=137</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=140" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=134">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=141</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=142</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=134</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=134</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=141" BrowseName="PreferredName" ParentNodeId="ns=1;i=140" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=140</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Vision condition of the client</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=142" BrowseName="DataType" ParentNodeId="ns=1;i=140" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=140</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=143" BrowseName="0:https://example.com/ids/cd/8302_9030_6052_7806" ParentNodeId="ns=1;i=87">
+    <DisplayName>https://example.com/ids/cd/8302_9030_6052_7806</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=144</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=146</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=149</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=87</Reference>
+      <Reference ReferenceType="i=17604">ns=1;i=149</Reference>
+      <Reference ReferenceType="i=17597" IsForward="false">ns=1;i=163</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=6</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=144" BrowseName="Identification" ParentNodeId="ns=1;i=143">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=143</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=145</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=145" BrowseName="Id" ParentNodeId="ns=1;i=144" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=144</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/cd/8302_9030_6052_7806</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=146" BrowseName="DataSpecification" ParentNodeId="ns=1;i=143">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=143</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=147</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=148</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=147" BrowseName="Type" ParentNodeId="ns=1;i=146" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=146</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=148" BrowseName="Keys" ParentNodeId="ns=1;i=146" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=146</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(GlobalReference)https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=149" BrowseName="DataSpecificationIEC61360" ParentNodeId="ns=1;i=143">
+    <DisplayName>DataSpecificationIEC61360</DisplayName>
+    <Description Locale="en">DataSpecificationIEC61360</Description>
+    <References>
+      <Reference ReferenceType="i=46">ns=1;i=150</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=151</Reference>
+      <Reference ReferenceType="i=17604" IsForward="false">ns=1;i=143</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=3001</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=143</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=150" BrowseName="PreferredName" ParentNodeId="ns=1;i=149" DataType="i=21" ValueRank="1" AccessLevel="3">
+    <DisplayName>PreferredName</DisplayName>
+    <Description Locale="en">PreferredName</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=149</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>en</Locale>
+          <Text>Shows if the glasses are being used or stored</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=151" BrowseName="DataType" ParentNodeId="ns=1;i=149" DataType="i=12" AccessLevel="3">
+    <DisplayName>DataType</DisplayName>
+    <Description Locale="en">DataType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=149</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">STRING</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=88" BrowseName="DictionaryEntries" ParentNodeId="ns=1;i=86">
+    <DisplayName>DictionaryEntries</DisplayName>
+    <Description Locale="en">DictionaryEntries</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=86</Reference>
+      <Reference ReferenceType="i=40">i=17591</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=152" BrowseName="Gafas" ParentNodeId="ns=1;s=AssetAdminShell">
+    <DisplayName>AssetAdministrationShell:Gafas</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=154</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=156</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AssetAdminShell</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=153</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1024</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=153" BrowseName="Category" ParentNodeId="ns=1;i=152" DataType="i=12" AccessLevel="3">
+    <DisplayName>Category</DisplayName>
+    <Description Locale="en">Category</Description>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=154" BrowseName="Identification" ParentNodeId="ns=1;i=152">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=155</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=155" BrowseName="Id" ParentNodeId="ns=1;i=154" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=154</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/sm/8003_6150_6052_4282</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=156" BrowseName="Administration" ParentNodeId="ns=1;i=152">
+    <DisplayName>Administration</DisplayName>
+    <Description Locale="en">Administration</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=157</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=158</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=157" BrowseName="Version" ParentNodeId="ns=1;i=156" DataType="i=12" AccessLevel="3">
+    <DisplayName>Version</DisplayName>
+    <Description Locale="en">Version</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=156</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=158" BrowseName="Revision" ParentNodeId="ns=1;i=156" DataType="i=12" AccessLevel="3">
+    <DisplayName>Revision</DisplayName>
+    <Description Locale="en">Revision</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=156</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=159" BrowseName="OperationalData" ParentNodeId="ns=1;i=152">
+    <DisplayName>Submodel:OperationalData</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=160</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=163</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=169</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=175</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=181</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=184</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=162</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1007</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=160" BrowseName="Identification" ParentNodeId="ns=1;i=159">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=161</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=161" BrowseName="Id" ParentNodeId="ns=1;i=160" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=160</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/sm/8522_7122_5052_1879</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=162" BrowseName="Kind" ParentNodeId="ns=1;i=159" DataType="i=12" AccessLevel="3">
+    <DisplayName>Kind</DisplayName>
+    <Description Locale="en">Kind</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Instance</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=163" BrowseName="UsageState" ParentNodeId="ns=1;i=159">
+    <DisplayName>UsageState</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=164</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=167</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=168</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=143</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=164" BrowseName="SemanticId" ParentNodeId="ns=1;i=163">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=163</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=165</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=166</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=165" BrowseName="Type" ParentNodeId="ns=1;i=164" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=164</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=166" BrowseName="Keys" ParentNodeId="ns=1;i=164" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=164</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/8302_9030_6052_7806</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=167" BrowseName="ValueType" ParentNodeId="ns=1;i=163" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=163</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=168" BrowseName="Value" ParentNodeId="ns=1;i=163" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=163</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">In use</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=169" BrowseName="LensCondition" ParentNodeId="ns=1;i=159">
+    <DisplayName>LensCondition</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=170</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=173</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=174</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=108</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=170" BrowseName="SemanticId" ParentNodeId="ns=1;i=169">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=169</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=171</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=172</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=171" BrowseName="Type" ParentNodeId="ns=1;i=170" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=170</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=172" BrowseName="Keys" ParentNodeId="ns=1;i=170" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=170</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/3282_7172_5052_3866</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=173" BrowseName="ValueType" ParentNodeId="ns=1;i=169" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=169</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=174" BrowseName="Value" ParentNodeId="ns=1;i=169" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=169</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Good</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=175" BrowseName="FrameIntegrity" ParentNodeId="ns=1;i=159">
+    <DisplayName>FrameIntegrity</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=176</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=179</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=180</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=117</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=176" BrowseName="SemanticId" ParentNodeId="ns=1;i=175">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=175</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=177</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=178</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=177" BrowseName="Type" ParentNodeId="ns=1;i=176" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=176</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=178" BrowseName="Keys" ParentNodeId="ns=1;i=176" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=176</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/5403_7172_5052_8621</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=179" BrowseName="ValueType" ParentNodeId="ns=1;i=175" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=175</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=180" BrowseName="Value" ParentNodeId="ns=1;i=175" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=175</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Intact</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=181" BrowseName="LastRevisionDate" ParentNodeId="ns=1;i=159">
+    <DisplayName>LastRevisionDate</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=182</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=183</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=182" BrowseName="ValueType" ParentNodeId="ns=1;i=181" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=181</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=183" BrowseName="Value" ParentNodeId="ns=1;i=181" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=181</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">2023-05-27</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=184" BrowseName="CheckVisionStatus" ParentNodeId="ns=1;i=159">
+    <DisplayName>CheckVisionStatus</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=185</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=195</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=159</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=202</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1019</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=185" BrowseName="OperationInputVariables" ParentNodeId="ns=1;i=184">
+    <DisplayName>OperationInputVariables</DisplayName>
+    <Description Locale="en">OperationInputVariables</Description>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=186</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=189</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=192</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=184</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1019</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=186" BrowseName="CurrentPrescription" ParentNodeId="ns=1;i=185">
+    <DisplayName>CurrentPrescription</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=185</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=187</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=188</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=187" BrowseName="ValueType" ParentNodeId="ns=1;i=186" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=186</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Float</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=188" BrowseName="Value" ParentNodeId="ns=1;i=186" DataType="i=10" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=186</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">5</Float>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=189" BrowseName="TargetRangeMin" ParentNodeId="ns=1;i=185">
+    <DisplayName>TargetRangeMin</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=185</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=190</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=191</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=190" BrowseName="ValueType" ParentNodeId="ns=1;i=189" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=189</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Float</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=191" BrowseName="Value" ParentNodeId="ns=1;i=189" DataType="i=10" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=189</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">-25</Float>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=192" BrowseName="TargetRangeMax" ParentNodeId="ns=1;i=185">
+    <DisplayName>TargetRangeMax</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=185</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=193</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=194</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=193" BrowseName="ValueType" ParentNodeId="ns=1;i=192" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=192</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Float</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=194" BrowseName="Value" ParentNodeId="ns=1;i=192" DataType="i=10" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=192</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <Float xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">25</Float>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=195" BrowseName="OperationOutputVariables" ParentNodeId="ns=1;i=184">
+    <DisplayName>OperationOutputVariables</DisplayName>
+    <Description Locale="en">OperationOutputVariables</Description>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=196</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=184</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1019</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=196" BrowseName="VisionStatus" ParentNodeId="ns=1;i=195">
+    <DisplayName>VisionStatus</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=197</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=200</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=201</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=197" BrowseName="DataSpecification" ParentNodeId="ns=1;i=196">
+    <DisplayName>DataSpecification</DisplayName>
+    <Description Locale="en">DataSpecification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=196</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=198</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=199</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=198" BrowseName="Type" ParentNodeId="ns=1;i=197" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=197</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=199" BrowseName="Keys" ParentNodeId="ns=1;i=197" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=197</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=200" BrowseName="ValueType" ParentNodeId="ns=1;i=196" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=196</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Boolean</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=201" BrowseName="Value" ParentNodeId="ns=1;i=196" DataType="i=1" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=196</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=202" BrowseName="Operation" ParentNodeId="ns=1;i=184">
+    <DisplayName>Operation</DisplayName>
+    <Description Locale="en">Operation</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=184</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=203</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=204</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=203" BrowseName="InputArguments" ParentNodeId="ns=1;i=202" DataType="i=296" ValueRank="1" AccessLevel="3">
+    <DisplayName>InputArguments</DisplayName>
+    <Description Locale="en">InputArguments</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=202</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>CurrentPrescription</Name>
+              <DataType>
+                <Identifier>i=10</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>TargetRangeMin</Name>
+              <DataType>
+                <Identifier>i=10</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>TargetRangeMax</Name>
+              <DataType>
+                <Identifier>i=10</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=204" BrowseName="OutputArguments" ParentNodeId="ns=1;i=202" DataType="i=296" ValueRank="1" AccessLevel="3">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description Locale="en">OutputArguments</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=202</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>VisionStatus</Name>
+              <DataType>
+                <Identifier>i=1</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions p5:nil="true" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance" />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=205" BrowseName="GeneralProperties" ParentNodeId="ns=1;i=152">
+    <DisplayName>Submodel:GeneralProperties</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=206</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=209</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=212</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=227</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=230</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=236</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=152</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=208</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1007</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=206" BrowseName="Identification" ParentNodeId="ns=1;i=205">
+    <DisplayName>Identification</DisplayName>
+    <Description Locale="en">Identification</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=207</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1000</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=207" BrowseName="Id" ParentNodeId="ns=1;i=206" DataType="i=12" AccessLevel="3">
+    <DisplayName>Id</DisplayName>
+    <Description Locale="en">Id</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=206</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">https://example.com/ids/sm/1274_3120_6052_7118</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=208" BrowseName="Kind" ParentNodeId="ns=1;i=205" DataType="i=12" AccessLevel="3">
+    <DisplayName>Kind</DisplayName>
+    <Description Locale="en">Kind</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Template</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=209" BrowseName="ClientName" ParentNodeId="ns=1;i=205">
+    <DisplayName>ClientName</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=210</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=211</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=210" BrowseName="ValueType" ParentNodeId="ns=1;i=209" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=209</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=211" BrowseName="Value" ParentNodeId="ns=1;i=209" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=209</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Alvaro Fernandez Ramos</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=212" BrowseName="FrameMaterial" ParentNodeId="ns=1;i=205">
+    <DisplayName>FrameMaterial</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=213</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=216</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=217</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=89</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=213" BrowseName="SemanticId" ParentNodeId="ns=1;i=212">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=212</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=214</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=215</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=214" BrowseName="Type" ParentNodeId="ns=1;i=213" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=213</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=215" BrowseName="Keys" ParentNodeId="ns=1;i=213" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=213</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/5134_6172_5052_0929</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=216" BrowseName="ValueType" ParentNodeId="ns=1;i=212" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=212</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=217" BrowseName="Value" ParentNodeId="ns=1;i=212" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=212</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Plastic</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=218" BrowseName="FrameColor" ParentNodeId="ns=1;i=205">
+    <DisplayName>FrameColor</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=219</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=222</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=225</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=226</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=125</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=219" BrowseName="SemanticId" ParentNodeId="ns=1;i=218">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=220</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=221</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=220" BrowseName="Type" ParentNodeId="ns=1;i=219" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=219</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=221" BrowseName="Keys" ParentNodeId="ns=1;i=219" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=219</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/4085_3120_6052_6662</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=222" BrowseName="ValueId" ParentNodeId="ns=1;i=218">
+    <DisplayName>ValueId</DisplayName>
+    <Description Locale="en">ValueId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=223</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=224</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=223" BrowseName="Type" ParentNodeId="ns=1;i=222" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=222</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ExternalReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=224" BrowseName="Keys" ParentNodeId="ns=1;i=222" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=222</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=225" BrowseName="ValueType" ParentNodeId="ns=1;i=218" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=226" BrowseName="Value" ParentNodeId="ns=1;i=218" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=218</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Black</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=227" BrowseName="FrameBrand" ParentNodeId="ns=1;i=205">
+    <DisplayName>FrameBrand</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=228</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=229</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=228" BrowseName="ValueType" ParentNodeId="ns=1;i=227" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=227</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=229" BrowseName="Value" ParentNodeId="ns=1;i=227" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=227</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Ray-Ban</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=230" BrowseName="LensType" ParentNodeId="ns=1;i=205">
+    <DisplayName>LensType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=231</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=234</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=235</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=99</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=231" BrowseName="SemanticId" ParentNodeId="ns=1;i=230">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=230</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=232</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=233</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=232" BrowseName="Type" ParentNodeId="ns=1;i=231" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=231</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=233" BrowseName="Keys" ParentNodeId="ns=1;i=231" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=231</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/9461_7172_5052_9479</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=234" BrowseName="ValueType" ParentNodeId="ns=1;i=230" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=230</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=235" BrowseName="Value" ParentNodeId="ns=1;i=230" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=230</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Normal</String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=236" BrowseName="VisionCondition" ParentNodeId="ns=1;i=205">
+    <DisplayName>VisionCondition</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47">ns=1;i=237</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=205</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=240</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=241</Reference>
+      <Reference ReferenceType="i=17597">ns=1;i=134</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1009</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=237" BrowseName="SemanticId" ParentNodeId="ns=1;i=236">
+    <DisplayName>SemanticId</DisplayName>
+    <Description Locale="en">SemanticId</Description>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=236</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=238</Reference>
+      <Reference ReferenceType="i=46">ns=1;i=239</Reference>
+      <Reference ReferenceType="i=40">ns=2;i=1005</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=238" BrowseName="Type" ParentNodeId="ns=1;i=237" DataType="i=12" AccessLevel="3">
+    <DisplayName>Type</DisplayName>
+    <Description Locale="en">Type</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=237</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">ModelReference</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=239" BrowseName="Keys" ParentNodeId="ns=1;i=237" DataType="i=12" AccessLevel="3">
+    <DisplayName>Keys</DisplayName>
+    <Description Locale="en">Keys</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=237</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">(ConceptDescription)https://example.com/ids/cd/8505_8030_6052_7237</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=240" BrowseName="ValueType" ParentNodeId="ns=1;i=236" DataType="i=12" AccessLevel="3">
+    <DisplayName>ValueType</DisplayName>
+    <Description Locale="en">ValueType</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=236</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">String</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=241" BrowseName="Value" ParentNodeId="ns=1;i=236" DataType="i=12" AccessLevel="3">
+    <DisplayName>Value</DisplayName>
+    <Description Locale="en">Value</Description>
+    <References>
+      <Reference ReferenceType="i=46" IsForward="false">ns=1;i=236</Reference>
+      <Reference ReferenceType="i=40">i=68</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Myopia</String>
+    </Value>
+  </UAVariable>
+</UANodeSet>
