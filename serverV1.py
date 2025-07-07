@@ -31,20 +31,35 @@ async def main():
     checkVisionStatus = server.get_node("ns=2;i=202")
     server.link_method(checkVisionStatus,checkVisionStatusMethod)
     
-    ValueClientName=server.get_node("ns=2;i=211")
+    ValueClientName = server.get_node("ns=2;i=211")
     await ValueClientName.set_writable()
-    
-    ValueFrameIntegrity=server.get_node("ns=2;i=180")
+
+    ValueFrameMaterial = server.get_node("ns=2;i=217")
+    await ValueFrameMaterial.set_writable()
+
+    ValueFrameColor = server.get_node("ns=2;i=226")
+    await ValueFrameColor.set_writable()
+
+    ValueFrameBrand = server.get_node("ns=2;i=229")
+    await ValueFrameBrand.set_writable()
+
+    ValueLensType = server.get_node("ns=2;i=235")
+    await ValueLensType.set_writable()
+
+    ValueVisionCondition = server.get_node("ns=2;i=241")
+    await ValueVisionCondition.set_writable()
+
+    ValueUsageState = server.get_node("ns=2;i=168")
+    await ValueUsageState.set_writable()
+
+    ValueLensCondition = server.get_node("ns=2;i=174")
+    await ValueLensCondition.set_writable()
+
+    ValueFrameIntegrity = server.get_node("ns=2;i=180")
     await ValueFrameIntegrity.set_writable()
 
-    ValueLastRevisionDate=server.get_node("ns=2;i=183")
+    ValueLastRevisionDate = server.get_node("ns=2;i=183")
     await ValueLastRevisionDate.set_writable()
-    
-    ValueLensCondition=server.get_node("ns=2;i=174")
-    await ValueLensCondition.set_writable()
-    
-    ValueUsageState=server.get_node("ns=2;i=168")
-    await ValueUsageState.set_writable()
     
     async with server:
         while True:
