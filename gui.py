@@ -2,6 +2,8 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushBut
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
 
+
+
 class NodeWidget(QWidget):
     def __init__(self, node_label, node_id):
         super().__init__()
