@@ -25,4 +25,8 @@ This is a Python desktop application that connects to a local OPC UA server and 
   - Add features for creating, editing, and deleting users.
 
 - **Asset Creation:**
-  - Implement functionality to create and manage new glasses (AAS models) dynamically from the GUI admin interface. 
+  - Implement functionality to create and manage new glasses (AAS models) dynamically from the GUI admin interface.
+ 
+- **Password encryption:**
+  - It would be crucial to encrypt passwords when we move to production
+ 
