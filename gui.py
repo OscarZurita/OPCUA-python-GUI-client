@@ -74,41 +74,48 @@ class ViewMeetingsDialog(QDialog):
         self.setLayout(layout)
 
 class Sidebar(QWidget):
-    def __init__(self, user_type="clinico"):
+    def __init__(self, user_type="clinico", username=None):
         super().__init__()
         layout = QVBoxLayout()
         # Title label
         if user_type == "client":
             title = QLabel("Client")
-            self.schedule_meeting_button = QPushButton("Schedule Meeting")
-            layout.addWidget(self.schedule_meeting_button)
         else:
             title = QLabel("Admin")
-            self.view_meetings_button = QPushButton("View Meetings")
-            layout.addWidget(self.view_meetings_button)
         title.setAlignment(Qt.AlignCenter)
         title.setFont(QFont('Arial', 14, QFont.Bold))
         layout.addWidget(title)
         layout.addSpacing(10)
+        if user_type == "client":
+            self.schedule_meeting_button = QPushButton("Schedule Meeting")
+            layout.addWidget(self.schedule_meeting_button)
+        else:
+            self.view_meetings_button = QPushButton("View Meetings")
+            layout.addWidget(self.view_meetings_button)
         self.logout_button = QPushButton('Logout')
-        # Add more buttons here as needed in the future
         layout.addWidget(self.logout_button)
         layout.addStretch()  # Push buttons to the top
+        # Username label at the bottom
+        if username:
+            user_label = QLabel(f"Logged in as: <b>{username}</b>")
+            user_label.setAlignment(Qt.AlignCenter)
+            user_label.setStyleSheet("color: #555; font-size: 12px; padding: 8px; border-top: 1px solid #ccc; margin-top: 8px;")
+            layout.addWidget(user_label)
         self.setLayout(layout)
 
 class MainWindow(QWidget):
     logout_requested = pyqtSignal()  # Signal to emit when logout is requested
     
-    def __init__(self, nodes, user_type="clinico", opcua_client=None):
+    def __init__(self, nodes, user_type="clinico", opcua_client=None, username=None):
         super().__init__()
         self.setWindowTitle('Optical clinic AAS')
         self.opcua_client = opcua_client
         main_layout = QHBoxLayout()  # Main layout is now horizontal
 
         # Sidebar
-        self.sidebar = Sidebar(user_type=user_type)
+        self.sidebar = Sidebar(user_type=user_type, username=username)
         main_layout.addWidget(self.sidebar)
-        self.sidebar.setFixedWidth(120)
+        self.sidebar.setFixedWidth(200)
         # Add a vertical line separator
         separator = QFrame()
         separator.setFrameShape(QFrame.VLine)
@@ -179,11 +186,13 @@ class MainWindow(QWidget):
             scheduled_meeting_nodeid = "ns=4;s=System.ScheduledMeeting"
             try:
                 if self.opcua_client:
+                    self.opcua_client.ensure_connected()
                     # Read current meetings array
                     meetings = self.opcua_client.read_node(scheduled_meeting_nodeid)
                     if not isinstance(meetings, list):
                         meetings = []
                     meetings.append(meeting_info)
+                    self.opcua_client.ensure_connected()
                     self.opcua_client.write_node(scheduled_meeting_nodeid, meetings)
                     print(f"Meeting scheduled and written to OPC UA: {meeting_info}")
                 else:
@@ -196,6 +205,7 @@ class MainWindow(QWidget):
         meeting_info = ""
         try:
             if self.opcua_client:
+                self.opcua_client.ensure_connected()
                 meetings = self.opcua_client.read_node(scheduled_meeting_nodeid)
                 if isinstance(meetings, list) and meetings:
                     meeting_info = "\n\n".join(meetings)

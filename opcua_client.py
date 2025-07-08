@@ -8,6 +8,14 @@ class OPCUAClient:
         self.password = password
         self.client = None
 
+    def ensure_connected(self):
+        # Try to check if the client and session are active, reconnect if not
+        try:
+            if not self.client or not getattr(self.client, 'session', None) or not self.client.session.active:
+                self.connect()
+        except Exception:
+            self.connect()
+
     def connect(self):
         # Create event loop if it doesn't exist
         try:
