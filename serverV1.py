@@ -27,7 +27,9 @@ class CustomUserManager(UserManager):
         if username and password:
             user = self.users.get(username)
             if user and user["password"] == password:
+                print(f"Authenticated user: {username}, role: {user['role']}")
                 return User(role=user["role"])
+        print(f"Failed authentication for: {username}")
         return None
 
 async def main():
@@ -45,7 +47,21 @@ async def main():
     print("Servidor OPC UA levantado en opc.tcp://localhost:4840/")
     print("Modelo AAS importado correctamente")
     print("Esperando conexiones de clientes...")
-    
+
+    # --- Add System object and ScheduledMeeting node ---
+    system_uri = "http://example.com/system"
+    system_idx = await server.register_namespace(system_uri)
+    print(f"System namespace index: {system_idx}")
+    objects = server.nodes.objects
+    system_obj = await objects.add_object(system_idx, "System")
+    meeting_nodeid = ua.NodeId("System.ScheduledMeeting", system_idx)
+    meeting_node = await system_obj.add_variable(meeting_nodeid, "ScheduledMeeting", [], varianttype=ua.VariantType.String)
+    await meeting_node.set_writable()
+    await meeting_node.set_attr_bit(ua.AttributeIds.AccessLevel, ua.AccessLevel.CurrentWrite)
+    await meeting_node.set_attr_bit(ua.AttributeIds.UserAccessLevel, ua.AccessLevel.CurrentWrite)
+    print(f"ScheduledMeeting NodeId: {meeting_node.nodeid}")
+    # ---------------------------------------------------
+
     # Set up nodes - all users can read, but write permissions are checked per request
     checkVisionStatus = server.get_node("ns=2;i=202")
     server.link_method(checkVisionStatus, checkVisionStatusMethod)

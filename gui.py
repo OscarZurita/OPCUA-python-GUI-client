@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QComboBox, QHBoxLayout, QDateEdit, QFrame
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QComboBox, QHBoxLayout, QDateEdit, QFrame, QDialog, QLineEdit, QTextEdit, QDialogButtonBox, QDateTimeEdit
 from PyQt5.QtCore import Qt, QDate, pyqtSignal
 from PyQt5.QtGui import QFont
 from node_options import CLINIC_OPTIONS, CLIENT_OPTIONS
@@ -39,6 +39,40 @@ class NodeWidget(QWidget):
     def set_value(self, value):
         self.value_label.setText(str(value))
 
+class ScheduleMeetingDialog(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Schedule Meeting")
+        layout = QVBoxLayout()
+        self.datetime_edit = QDateTimeEdit()
+        self.datetime_edit.setCalendarPopup(True)
+        self.datetime_edit.setDateTime(QDate.currentDate().startOfDay())
+        layout.addWidget(QLabel("Select date and time:"))
+        layout.addWidget(self.datetime_edit)
+        self.details_edit = QTextEdit()
+        layout.addWidget(QLabel("Details:"))
+        layout.addWidget(self.details_edit)
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+        self.setLayout(layout)
+    def get_data(self):
+        return self.datetime_edit.dateTime().toString("yyyy-MM-dd HH:mm"), self.details_edit.toPlainText()
+
+class ViewMeetingsDialog(QDialog):
+    def __init__(self, meeting_info):
+        super().__init__()
+        self.setWindowTitle("Scheduled Meetings")
+        layout = QVBoxLayout()
+        self.meeting_label = QLabel(meeting_info if meeting_info else "No meetings scheduled.")
+        self.meeting_label.setWordWrap(True)
+        layout.addWidget(self.meeting_label)
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok)
+        buttons.accepted.connect(self.accept)
+        layout.addWidget(buttons)
+        self.setLayout(layout)
+
 class Sidebar(QWidget):
     def __init__(self, user_type="clinico"):
         super().__init__()
@@ -46,8 +80,12 @@ class Sidebar(QWidget):
         # Title label
         if user_type == "client":
             title = QLabel("Client")
+            self.schedule_meeting_button = QPushButton("Schedule Meeting")
+            layout.addWidget(self.schedule_meeting_button)
         else:
             title = QLabel("Admin")
+            self.view_meetings_button = QPushButton("View Meetings")
+            layout.addWidget(self.view_meetings_button)
         title.setAlignment(Qt.AlignCenter)
         title.setFont(QFont('Arial', 14, QFont.Bold))
         layout.addWidget(title)
@@ -61,9 +99,10 @@ class Sidebar(QWidget):
 class MainWindow(QWidget):
     logout_requested = pyqtSignal()  # Signal to emit when logout is requested
     
-    def __init__(self, nodes, user_type="clinico"):
+    def __init__(self, nodes, user_type="clinico", opcua_client=None):
         super().__init__()
         self.setWindowTitle('Optical clinic AAS')
+        self.opcua_client = opcua_client
         main_layout = QHBoxLayout()  # Main layout is now horizontal
 
         # Sidebar
@@ -123,6 +162,51 @@ class MainWindow(QWidget):
         
         # Connect logout button from sidebar
         self.sidebar.logout_button.clicked.connect(self.logout_requested.emit)
+
+        # Connect schedule meeting button if client
+        if user_type == "client" and hasattr(self.sidebar, "schedule_meeting_button"):
+            self.sidebar.schedule_meeting_button.clicked.connect(self.open_schedule_meeting_dialog)
+
+        # Connect view meetings button if admin
+        if user_type == "clinic" and hasattr(self.sidebar, "view_meetings_button"):
+            self.sidebar.view_meetings_button.clicked.connect(self.open_view_meetings_dialog)
+
+    def open_schedule_meeting_dialog(self):
+        dialog = ScheduleMeetingDialog()
+        if dialog.exec_() == QDialog.Accepted:
+            datetime_str, details = dialog.get_data()
+            meeting_info = f"{datetime_str} | {details}"
+            scheduled_meeting_nodeid = "ns=4;s=System.ScheduledMeeting"
+            try:
+                if self.opcua_client:
+                    # Read current meetings array
+                    meetings = self.opcua_client.read_node(scheduled_meeting_nodeid)
+                    if not isinstance(meetings, list):
+                        meetings = []
+                    meetings.append(meeting_info)
+                    self.opcua_client.write_node(scheduled_meeting_nodeid, meetings)
+                    print(f"Meeting scheduled and written to OPC UA: {meeting_info}")
+                else:
+                    print("OPCUA client not available, could not write meeting info.")
+            except Exception as e:
+                print(f"Error writing meeting info: {e}")
+
+    def open_view_meetings_dialog(self):
+        scheduled_meeting_nodeid = "ns=4;s=System.ScheduledMeeting"
+        meeting_info = ""
+        try:
+            if self.opcua_client:
+                meetings = self.opcua_client.read_node(scheduled_meeting_nodeid)
+                if isinstance(meetings, list) and meetings:
+                    meeting_info = "\n\n".join(meetings)
+                else:
+                    meeting_info = "No meetings scheduled."
+            else:
+                meeting_info = "OPCUA client not available."
+        except Exception as e:
+            meeting_info = f"Error reading meeting info: {e}"
+        dialog = ViewMeetingsDialog(meeting_info)
+        dialog.exec_()
 
     def set_node_value(self, node_id, value):
         for widget in self.node_widgets:
