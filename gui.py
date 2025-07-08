@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QComboBox, QHBoxLayout, QDateEdit
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QComboBox, QHBoxLayout, QDateEdit, QFrame
 from PyQt5.QtCore import Qt, QDate, pyqtSignal
 from PyQt5.QtGui import QFont
 from node_options import CLINIC_OPTIONS, CLIENT_OPTIONS
@@ -39,18 +39,51 @@ class NodeWidget(QWidget):
     def set_value(self, value):
         self.value_label.setText(str(value))
 
+class Sidebar(QWidget):
+    def __init__(self, user_type="clinico"):
+        super().__init__()
+        layout = QVBoxLayout()
+        # Title label
+        if user_type == "client":
+            title = QLabel("Client")
+        else:
+            title = QLabel("Admin")
+        title.setAlignment(Qt.AlignCenter)
+        title.setFont(QFont('Arial', 14, QFont.Bold))
+        layout.addWidget(title)
+        layout.addSpacing(10)
+        self.logout_button = QPushButton('Logout')
+        # Add more buttons here as needed in the future
+        layout.addWidget(self.logout_button)
+        layout.addStretch()  # Push buttons to the top
+        self.setLayout(layout)
+
 class MainWindow(QWidget):
     logout_requested = pyqtSignal()  # Signal to emit when logout is requested
     
     def __init__(self, nodes, user_type="clinico"):
         super().__init__()
         self.setWindowTitle('Optical clinic AAS')
-        self.layout = QVBoxLayout()
+        main_layout = QHBoxLayout()  # Main layout is now horizontal
+
+        # Sidebar
+        self.sidebar = Sidebar(user_type=user_type)
+        main_layout.addWidget(self.sidebar)
+        self.sidebar.setFixedWidth(120)
+        # Add a vertical line separator
+        separator = QFrame()
+        separator.setFrameShape(QFrame.VLine)
+        separator.setFrameShadow(QFrame.Sunken)
+        main_layout.addWidget(separator)
+
+        # Main content area
+        content_widget = QWidget()
+        content_layout = QVBoxLayout()
         self.title_label = QLabel('Optical clinic AAS')
         self.title_label.setFont(QFont('Arial', 18, QFont.Bold))
         self.title_label.setAlignment(Qt.AlignCenter)
-        self.layout.addWidget(self.title_label)
-        self.layout.addSpacing(10)
+        content_layout.addWidget(self.title_label)
+        content_layout.addSpacing(10)
         self.node_widgets = []
         
         # Define which nodes to show based on user type
@@ -73,23 +106,23 @@ class MainWindow(QWidget):
         for label, node_id in filtered_nodes:
             node_widget = NodeWidget(label, node_id, node_options, user_type=user_type)
             self.node_widgets.append(node_widget)
-            self.layout.addWidget(node_widget)
-            self.layout.addSpacing(5)
+            content_layout.addWidget(node_widget)
+            content_layout.addSpacing(5)
         
-        # Add buttons layout
+        # Add buttons layout (only refresh here)
         buttons_layout = QHBoxLayout()
         self.refresh_button = QPushButton('Refresh All')
-        self.logout_button = QPushButton('Logout')
         buttons_layout.addWidget(self.refresh_button)
-        buttons_layout.addWidget(self.logout_button)
-        
-        self.layout.addSpacing(10)
-        self.layout.addLayout(buttons_layout)
-        self.setLayout(self.layout)
+        buttons_layout.addStretch()
+        content_layout.addSpacing(10)
+        content_layout.addLayout(buttons_layout)
+        content_widget.setLayout(content_layout)
+        main_layout.addWidget(content_widget)
+        self.setLayout(main_layout)
         self.setMinimumWidth(600)
         
-        # Connect logout button
-        self.logout_button.clicked.connect(self.logout_requested.emit)
+        # Connect logout button from sidebar
+        self.sidebar.logout_button.clicked.connect(self.logout_requested.emit)
 
     def set_node_value(self, node_id, value):
         for widget in self.node_widgets:
