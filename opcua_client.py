@@ -1,4 +1,4 @@
-from asyncua import Client
+from asyncua import Client, ua
 import asyncio
 
 class OPCUAClient:
@@ -89,4 +89,6 @@ class OPCUAClient:
 
     async def _async_write_node(self, node_id, value):
         node = self.client.get_node(node_id)
-        await node.write_value(value) 
+        variant_type = await node.read_data_type_as_variant_type()
+        dv = ua.DataValue(ua.Variant(value, variant_type))
+        await node.write_value(dv)
