@@ -37,7 +37,7 @@ def main_application_loop():
             
         # Create main window
         user_type = "clinic" if username == "admin" else "client"
-        window = MainWindow(NODES, user_type=user_type)
+        window = MainWindow(NODES, user_type=user_type, opcua_client=opcua_client)
 
         def refresh_all():
             for label, node_id in NODES:
