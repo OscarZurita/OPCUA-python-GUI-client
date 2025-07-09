@@ -15,7 +15,10 @@ This is a Python desktop application that connects to a local OPC UA server and 
 3. Run the application:
    ```bash
    python main.py
-   ``` 
+   ```
+4. Authenticate:
+   - admin: admin (for admin control and view)
+   - alvaro: alvaro (for client view)
 
 ## Next Steps
 
